@@ -1,0 +1,6 @@
+username: admin
+packages:
+  - vim
+  - git
+  - curl
+  - gnupg

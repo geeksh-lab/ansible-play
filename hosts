@@ -1,0 +1,2 @@
+[server]
+nginxserver ansible_host=54.196.155.5 ansible_user=admin

@@ -1,0 +1,20 @@
+- name: Update Packages
+  apt:
+    update_cache: yes
+
+- name: Install essentials Packages
+  package:
+    name: "{{packages}}"
+    state: latest
+
+- name: NodeSource package key
+  apt_key:
+    state: present
+    url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+- name: NodeSource repository
+  apt_repository:
+    repo: "deb https://deb.nodesource.com/node_16.x buster main"
+- name: Install NodeJS
+  apt:
+    state: present
+    name: nodejs
